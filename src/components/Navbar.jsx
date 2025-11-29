@@ -20,6 +20,7 @@
         <li onClick={() => goTo("fetch")}>Fetch</li>
         <li onClick={() => goTo("local")}>Localstorage</li>
         <li onClick={() => goTo("props")}>Props</li>
+        <li onClick={() => goTo("review")}>Review</li>
       </ul>
     </nav>
   );

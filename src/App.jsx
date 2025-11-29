@@ -1,4 +1,4 @@
-import "./App.css"; 
+import "./App.css";
 
 import Navbar from "./components/Navbar";
 import UseStateDemo from "./components/StatePractice";
@@ -10,7 +10,7 @@ import Fibonacci from "./components/Fibonacci";
 import AutoCounter from "./components/AutoCounter";
 import FetchExample, { LocalStorageExample } from "./components/Effect";
 import Welcome from "./components/Welcome";
-
+import ReviewForm from "./components/ReviewForm";
 
 const App = () => {
   return (
@@ -53,21 +53,22 @@ const App = () => {
       <div id="local">
         <LocalStorageExample />
       </div>
+
       <div id="props">
         <Welcome
-  name="Ramya"
-  age={25}
-  skills={["React", "JS", "CSS"]}
-  address={{ city: "Chennai", pin: 600001 }}
-  isStudent={false}
-  greet={() => alert("Hello")}
-/>
-
+          name="Ramya"
+          age={25}
+          skills={["React", "JS", "CSS"]}
+          address={{ city: "Chennai", pin: 600001 }}
+          isStudent={false}
+          greet={() => alert("Hello")}
+        />
       </div>
-      
-    </>
 
-    
+      <div id="review">
+        <ReviewForm />
+      </div>
+    </>
   );
 };
 

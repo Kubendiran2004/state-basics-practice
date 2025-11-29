@@ -31,6 +31,8 @@ const FetchExample = () => {
   );
 };
 
+//      //       ///         ////
+
 const LocalStorageExample = () => {
   const [name, setName] = useState("");
 
