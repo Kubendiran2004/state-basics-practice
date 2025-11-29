@@ -1,23 +1,74 @@
-import UseStateDemo from "./components/StatePractice"
 import "./App.css"; 
 
-
-const App = () =>{
-
-return(
-
-  <>
-
-<UseStateDemo/>
-
-  </>
-
-
-)
+import Navbar from "./components/Navbar";
+import UseStateDemo from "./components/StatePractice";
+import Numbers from "./components/Numbers";
+import Circle from "./components/Process";
+import Image, { Txt } from "./components/Image";
+import ShapeToggle from "./components/Shape";
+import Fibonacci from "./components/Fibonacci";
+import AutoCounter from "./components/AutoCounter";
+import FetchExample, { LocalStorageExample } from "./components/Effect";
+import Welcome from "./components/Welcome";
 
 
-}
+const App = () => {
+  return (
+    <>
+      <Navbar />
 
+      <div id="state">
+        <UseStateDemo />
+      </div>
 
+      <div id="numbers">
+        <Numbers />
+      </div>
 
-export default App
+      <div id="circle">
+        <Circle />
+      </div>
+
+      <div id="image">
+        <Image />
+        <Txt />
+      </div>
+
+      <div id="shape">
+        <ShapeToggle />
+      </div>
+
+      <div id="fib">
+        <Fibonacci />
+      </div>
+
+      <div id="counter">
+        <AutoCounter />
+      </div>
+
+      <div id="fetch">
+        <FetchExample />
+      </div>
+
+      <div id="local">
+        <LocalStorageExample />
+      </div>
+      <div id="props">
+        <Welcome
+  name="Ramya"
+  age={25}
+  skills={["React", "JS", "CSS"]}
+  address={{ city: "Chennai", pin: 600001 }}
+  isStudent={false}
+  greet={() => alert("Hello")}
+/>
+
+      </div>
+      
+    </>
+
+    
+  );
+};
+
+export default App;

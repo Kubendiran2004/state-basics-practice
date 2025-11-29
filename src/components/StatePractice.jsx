@@ -135,8 +135,8 @@ const UseStateDemo = () => {
                         <button onClick={addArray} style={{ background: "grey", padding: "5px", border: "none", borderRadius: "5px" }}>Add Name</button>
                         <br />
                         <h3>Name: {person.name} Age: {person.age}</h3>
-                        <button onClick={ChangeName} style={{ background: "red", padding: "5px", border: "none", borderRadius: "5px" }}>Click For change object Name</button>
-                        <button onClick={ChangeAge} style={{ background: "red", padding: "5px", border: "none", borderRadius: "5px", margin: "2px" }}>Click For change object Name</button>
+                        <button onClick={ChangeName} style={{ background: "red", padding: "5px", border: "none", borderRadius: "5px" }}>Click For change Name</button>
+                        <button onClick={ChangeAge} style={{ background: "red", padding: "5px", border: "none", borderRadius: "5px", margin: "2px" }}>Click For change Age</button>
                         <br />
                         <h3>Array Of Object:</h3>
                         {
@@ -146,7 +146,7 @@ const UseStateDemo = () => {
                         }
                         <button onClick={addCountry} style={{ background: "green", padding: "5px", border: "none", borderRadius: "5px" }}>click here</button>
                         <br />
-                        <h3>Love Today</h3>
+                        <h3>Love Today:</h3>
                         {
                             actors.map((e, i) => (
                                 <div key={i}>
