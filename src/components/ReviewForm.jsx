@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ReviewForm = () => {
   const [name, setName] = useState("");
   const [rating, setRating] = useState("");
   const [comment, setComment] = useState("");
   const [reviews, setReviews] = useState([]);
+
+  // 1️⃣ FIRST TIME LOAD – LocalStorage la iruka data load pannadhu
+  useEffect(() => {
+    const storedReviews = JSON.parse(localStorage.getItem("reviews"));
+    if (storedReviews) {
+      setReviews(storedReviews);
+    }
+  }, []);
+
+  // 2️⃣ Whenever reviews change → localStorage update
+  useEffect(() => {
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  }, [reviews]);
 
   const submitReview = (e) => {
     e.preventDefault();
@@ -74,6 +87,9 @@ const ReviewForm = () => {
       </form>
 
       <h2 style={{ marginTop: "30px" }}>All Reviews:</h2>
+
+      {reviews.length === 0 && <p>No reviews yet.</p>}
+
       {reviews.map((r, i) => (
         <div
           key={i}
